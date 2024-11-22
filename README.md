@@ -44,6 +44,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 * Wait for atleast 5 mins before rebooting, to let the kermel module get built.
 * `modinfo -F version nvidia` #Check if the kernel module is built.
 * Reboot
+
 ## Media Codecs
 * Install these to get proper multimedia playback.
 ````
@@ -88,7 +89,8 @@ sudo dnf install libva-nvidia-driver
 sudo dnf install libva-nvidia-driver.{i686,x86_64}
 ```
 </details>
-### OpenH264 for Firefox
+
+## OpenH264 for Firefox
 * You can enable the OpenH264 Plugin directly in Firefox's settings.
 ## Set Hostname
 ```
@@ -96,6 +98,7 @@ hostnamectl set-hostname YOUR_HOSTNAME
 ```
 ## Optimizations [Optional]
 * The tips below can allow you to squeeze out a little bit more performance from your system. 
+
 ### Disable Mitigations 
 * Increases performance in multithreaded systems. The more cores you have in your cpu the greater the performance gain. 5-30% performance gain varying upon systems. Do not follow this if you share services and files through your network or are using fedora in a VM. 
 * Modern intel CPUs (above 10th gen) do not gain noticeable performance improvements upon disabling mitigations. Hence, disabling mitigations can present some security risks against various attacks, however, it still _might_ increase the CPU performance of your system.
@@ -129,7 +132,7 @@ sudo rm /etc/xdg/autostart/org.gnome.Software.desktop`
 ```
 dnf copr enable mrduarte/LenovoLegionLinux 
 ``` 
-* Then install the Application using:
+* Then install the app using:
 ```
 sudo dnf install python-darkdetect dkms-LenovoLegionLinux
 ```
